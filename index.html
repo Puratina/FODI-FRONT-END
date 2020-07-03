@@ -962,14 +962,6 @@
                     document.querySelector('.btn.download').addEventListener('click',
                         () => location.href = url
                     );
-                    document.querySelector('.btn.quote').addEventListener('click',
-                        event => {
-                            previewHandler.copyTextContent(null, window.api.url + '?file=' + path);
-                            const btn = document.querySelector('.btn.quote');
-                            btn.innerHTML = '已复制';
-                            setTimeout(() => btn.innerHTML = '引用', 250);
-                        }
-                    );
                     document.querySelector('.btn.share').addEventListener('click',
                         event => {
                             const sharePath = () => {
@@ -1318,7 +1310,6 @@
                     <div class="info">
                         <div class="file-name"></div>
                         <div class="btn download">下载</div>
-                        <div class ="btn quote"> </div>
                         <div class="btn share">分享</div>
                     </div>
                     <div class="content"></div>
